@@ -1,3 +1,8 @@
+---
+name: 概率思维
+description: "概率思维——从二元对错转向概率分布，用证据校准置信度。"
+---
+
 # Bayesian Reasoning | 概率思维
 
 A cognitive base that shifts reasoning from binary judgments to calibrated probability thinking, then updates beliefs proportionally to evidence strength.
