@@ -1,5 +1,8 @@
 # Install — Generic (Any Agent/Framework)
 
+> **Recommended**: Run `./install.sh` from the repo root for automated installation. Supports Claude Code, Gemini CLI, Codex CLI, Cursor, OpenCode, and OpenClaw.
+> The manual steps below are for reference or troubleshooting.
+
 ## Universal principle
 
 Bayesian Reasoning is a cognitive base — it changes how the agent handles uncertainty, not what tools it uses. Installation means injecting `cognitive-protocol.md` into the agent's always-on instructions (system prompt, rules file, or configuration).

@@ -1,5 +1,8 @@
 # Install — Codex (OpenAI)
 
+> **Recommended**: Run `./install.sh --agent=codex-cli` from the repo root for automated installation.
+> The manual steps below are for reference or troubleshooting.
+
 ## Method 1: AGENTS.md (recommended)
 
 Prepend the contents of `cognitive-protocol.md` to your project's `AGENTS.md` file. Codex reads this file automatically.

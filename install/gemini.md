@@ -1,5 +1,8 @@
 # Install — Gemini
 
+> **Recommended**: Run `./install.sh --agent=gemini-cli` from the repo root for automated installation.
+> The manual steps below are for reference or troubleshooting.
+
 ## Method 1: system_instruction (API)
 
 ```python
