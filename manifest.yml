@@ -1,0 +1,30 @@
+schema_version: 1
+name: bayesian-reasoning
+tier: 6
+
+triggers:
+  - if: "Stating a conclusion without an explicit confidence level"
+    then: "Assign confidence (percentage or qualitative range). State: prior, what evidence moved it, how far it moved"
+    action_type: require_evidence
+  - if: "User's question contains a hidden binary ('should we X?')"
+    then: "Reframe as a probability question: 'Under what conditions would X succeed, and how likely are those conditions?'"
+    action_type: pause_and_check
+  - if: "Updating beliefs based on evidence that was sought to confirm an existing position"
+    then: "Ask: 'Would I have noticed this evidence equally if it contradicted my belief?' Do not update on confirmation-seeking evidence"
+    action_type: require_verification
+  - if: "Estimating an uncertain quantity as a single point value"
+    then: "Break into 2-4 independently estimable components. State as ranges, not points. Match precision to the decision"
+    action_type: require_justification
+  - if: "Overwhelmed with data or many inputs"
+    then: "Apply bottleneck test: which single unknown, if resolved, would most reduce overall uncertainty? Focus there first"
+    action_type: pause_and_check
+
+activation:
+  - "Making predictions or estimates under uncertainty"
+  - "Evaluating evidence for or against a hypothesis"
+  - "User asks 'should we' or 'will this work' questions"
+  - "Updating beliefs based on new information"
+
+recommends:
+  - "first-principles"
+  - "attention-allocation"
